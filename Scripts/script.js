@@ -109,5 +109,17 @@ lista.addEventListener("click", async (e) => {
   }
 });
 
-
 //Query buscar
+
+const searchForm = document.getElementById('searchForm');
+const searchInput = document.getElementById('searchInput');
+
+searchForm.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    const termoBusca = searchInput.value.trim();
+    if (termoBusca) {
+        window.location.href = `/produtos?busca=${encodeURIComponent(termoBusca)}`;
+    } else {
+        alert("Por favor, digite algo para pesquisar!");
+    }
+});
