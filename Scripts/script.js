@@ -5,11 +5,31 @@ const emailInput = formulario.querySelectorAll("input")[1];
 const API = "https://jsonplaceholder.typicode.com/users";
 
 const botao = document.createElement("button");
-botao.textContent = "Mostrar usuários já cadastrados! (EXEMPLO)";
+botao.textContent = "Mostrar usuários já cadastrados!";
+botao.classList.add("btn-usuarios");
 botao.style.marginTop = "15px";
 formulario.parentElement.appendChild(botao);
 
+let listaVisivel = false; 
+
+botao.addEventListener("click", async () => {
+    listaVisivel = !listaVisivel; 
+
+    if (listaVisivel) {
+        botao.textContent = "Fechar lista de usuários";
+        lista.style.display = "block"; 
+        
+        const resposta = await fetch(API);
+        usuarios = await resposta.json();
+        mostrar();
+    } else {
+        botao.textContent = "Mostrar usuários já cadastrados!";
+        lista.style.display = "none"; 
+    }
+});
+
 const lista = document.createElement("div");
+lista.classList.add("lista-usuarios");
 formulario.parentElement.appendChild(lista);
 
 let usuarios = [];
@@ -88,3 +108,6 @@ lista.addEventListener("click", async (e) => {
     mostrar();
   }
 });
+
+
+//Query buscar

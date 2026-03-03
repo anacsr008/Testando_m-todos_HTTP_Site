@@ -29,14 +29,14 @@ header {
 }
 
 .logo {
-    max-height: 100px; 
+    max-height: 90px; 
     width:max-conte;    
     border-radius: 500%; 
 }
 
 .menu-principal {
     margin-top: -50px;
-    width: 110%;
+    width: 100%;
 }
 
 .menu-principal ul {
@@ -76,18 +76,17 @@ header {
     width: 100%;
 }
 
-
 .registro-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
+    padding: 30px 10px;
     background-color: #fff5f8; 
 }
 
 .perfil-card {
     background: white;
-    padding: 40px;
+    padding: 20px;
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
     width: 100%;
@@ -108,7 +107,6 @@ header {
     font-size: 0.95rem;
 }
 
-/* Grupos de entrada */
 .input-group {
     text-align: left;
     margin-bottom: 15px;
@@ -143,7 +141,7 @@ header {
     background-color: #ff85a1;
     color: white;
     border: none;
-    padding: 14px;
+    padding: 12px;
     border-radius: 25px;
     font-size: 1rem;
     font-weight: bold;
@@ -159,7 +157,7 @@ header {
 }
 
 .login-prompt {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 0.85rem !important;
 }
 
@@ -173,12 +171,90 @@ header {
   
     color: #ff85a1;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(252, 176, 225, 0.901);
     font-size: 1rem;
     opacity: 0.8;
 }
 
+.btn-usuarios {
+  background-color: #ff85a1; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
 
+.btn-usuarios:hover {
+  background-color: #ff5c8d;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-usuarios:active {
+  transform: scale(0.98);
+}
+
+.lista-usuarios {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.lista-usuarios > div {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #ffe4e9; 
+    transition: transform 0.2s;
+}
+
+.lista-usuarios > div:hover {
+    transform: translateY(-2px);
+}
+
+.lista-usuarios strong {
+    color: #ff5c8d;
+    font-size: 1.1rem;
+}
+
+.editar, .deletar {
+    margin-left: 5px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.70rem;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.editar {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.deletar {
+    background-color: #ff4d4d; 
+    color: white;
+}
+
+.editar:hover, .deletar:hover {
+    opacity: 0.8;
+}
+
+.lista-usuarios hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    display: none; 
+}
